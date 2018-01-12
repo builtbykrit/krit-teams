@@ -2,6 +2,9 @@
 Set of django apps for teams and invitations
 
 This library uses `django-rest-auth`, `djangorestframework`, and `djangorestframework-jsonapi`.
+
+`krit-authentication` is also a dependency so you do not need to install it seperately.
+
 Current version: 0.1
 
 ## Getting started
