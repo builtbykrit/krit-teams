@@ -5,11 +5,11 @@ This library uses `django-rest-auth`, `djangorestframework`, and `djangorestfram
 
 `krit-authentication` is also a dependency so you do not need to install it seperately.
 
-Current version: 0.1
+Current version: 0.1.0
 
 ## Getting started
 
-1. `pip install git+https://github.com/builtbykrit/krit-teams@0.1`
+1. `pip install git+https://github.com/builtbykrit/krit-teams@0.1.0 --process-dependency-links`
 3. Add `krit-teams` and `krit-invitations` to your apps
 4. Add `krit.teams.urls` and `krit.invitations.urls` to your urlpatterns. Add them to the bottom of the list if you need to override them.
 
