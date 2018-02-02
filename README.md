@@ -5,7 +5,7 @@ This library uses `django-rest-auth`, `djangorestframework`, and `djangorestfram
 
 `krit-authentication` is also a dependency so you do not need to install it seperately.
 
-Current version: 0.1.0
+Current version: 0.1.3
 
 Until `djangorestframework-jsonapi` supports Django 2.0, only Django 1.11 is supported. https://github.com/django-json-api/django-rest-framework-json-api/issues/397
 
