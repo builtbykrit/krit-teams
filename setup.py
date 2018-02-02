@@ -28,7 +28,7 @@ setup(
         'krit-authentication>=0.1.1',
         'urllib3>=1.22'
     ],
-    dependency_links=['git+https://git@github.com/builtbykrit/krit-authentication@0.1.1#egg=krit-authentication-0.1.1'],
+    dependency_links=['git+https://git@github.com/builtbykrit/krit-authentication@0.1.1#egg=krit-authentication-0.1.2'],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
