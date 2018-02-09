@@ -4,7 +4,7 @@ from rest_framework.generics import CreateAPIView, \
 from rest_framework.response import Response
 
 from krit.invitations.serializers import InvitationCreateSerializer
-from .models import Team
+from .models import Membership, Team
 from .serializers import TeamSerializer
 
 
@@ -43,9 +43,15 @@ class TeamInviteView(GenericAPIView):
 class TeamRetrieveView(RetrieveAPIView):
     included = ['memberships']
     permission_classes = (permissions.IsAuthenticated,)
-    queryset = Team.objects.all()
     resource_name = 'teams'
     serializer_class = TeamSerializer
+
+    def get_queryset(self):
+        try:
+            membership = Membership.objects.get(user_id=self.request.user.id)
+            return Team.objects.filter(id=membership.team.id).all()
+        except Membership.DoesNotExist:
+            return []
 
     def retrieve(self, request, *args, **kwargs):
         instance = self.get_object()

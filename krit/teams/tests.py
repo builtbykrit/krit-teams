@@ -94,6 +94,28 @@ class TeamViewsTestCase(APITestCase):
         self.assertEqual(response.status_code, 200)
         self.assert_team_response_is_correct(response)
 
+    def test_get_team_without_membership(self):
+        team = Team.objects.create(
+            creator=self.user,
+            name=self.TEAM_INFO['name']
+        )
+
+        userTwo = User.objects.create_user(
+            email='bill@gmail.com',
+            first_name='OtherTest',
+            last_name='Account',
+            password='password125',
+            username='bill@gmail.com'
+        )
+        teamTwo = Team.objects.create(
+            creator=userTwo,
+            name='Other Team'
+        )
+
+        response = self.client.get(reverse('teams-detail', args=(teamTwo.id,)))
+        self.assertEqual(response.status_code, 404)
+        # should return a 404 since it's not in the queryset
+
     def test_get_team_while_unauthenticated(self):
         client = APIClient()
 
