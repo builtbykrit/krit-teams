@@ -1,1 +1,1 @@
-git+https://git@github.com/builtbykrit/krit-authentication@0.1.4#egg=krit-authentication-0.1.4
+git+https://git@github.com/builtbykrit/krit-authentication@0.1.5#egg=krit-authentication-0.1.5

@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='krit-teams',
-    version='0.1.5',
+    version='0.1.6',
     packages=find_packages(),
     include_package_data=True,
     license='BSD License',
@@ -25,10 +25,10 @@ setup(
         'djangorestframework>=3.6.4',
         'djangorestframework-jsonapi>=2.2.0',
         'python-http-client>=3.0.0',
-        'krit-authentication>=0.1.1',
+        'krit-authentication>=0.1.5',
         'urllib3>=1.22'
     ],
-    dependency_links=['git+https://git@github.com/builtbykrit/krit-authentication@0.1.4#egg=krit-authentication-0.1.4'],
+    dependency_links=['git+https://git@github.com/builtbykrit/krit-authentication@0.1.5#egg=krit-authentication-0.1.5'],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
