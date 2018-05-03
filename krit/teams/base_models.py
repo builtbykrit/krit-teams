@@ -42,7 +42,7 @@ class BaseMembership(models.Model):
                                    null=True,
                                    blank=True,
                                    verbose_name="invitation",
-                                   on_delete=models.SET_NULL)
+                                   on_delete=models.CASCADE)
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
                              related_name="memberships",
