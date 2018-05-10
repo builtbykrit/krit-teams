@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: krit-teams
-Version: 0.1.6
+Version: 0.1.7
 Summary: Collection of apps for implementing teams in a Django app
 Home-page: https://www.builtbykrit.com
 Author: Kevin Hoffman
