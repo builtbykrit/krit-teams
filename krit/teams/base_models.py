@@ -1,3 +1,4 @@
+import django
 from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from django.db import models
 from django.urls import reverse
@@ -60,7 +61,10 @@ class BaseMembership(models.Model):
         self.invitation.delete()
 
     def __str__(self):
-        return "{0} in {1}".format(self.user, self.team)
+        try:
+            return "{0} in {1}".format(self.user, self.team)
+        except django.contrib.auth.models.User.DoesNotExist:
+            return "{}".format(self.team)
 
     @property
     def invitee(self):
